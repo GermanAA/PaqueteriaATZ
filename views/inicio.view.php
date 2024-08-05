@@ -250,29 +250,29 @@
       <div class="row">
         <div class="col l12 s12">
           <h5 class="Black-text">¿Estás interesado o tienes dudas sobre algún servicio?</h5>
-          <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST" class="col l10 offset-l1 ">
+          <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" id="myForm" method="POST" class="col l10 offset-l1 ">
             <div class="row ">
               <div class="input-field col s6">
                 <i class="material-icons prefix">account_circle</i>
-                <input id="icon_prefix" type="text" name="nombre" class="validate">
+                <input id="nombre" type="text" name="nombre" class="validate">
                 <label for="icon_prefix"> Nombre:</label>
               </div>
               <div class="input-field col s6">
                 <i class="material-icons prefix">email</i>
                 <input id="email" name="correo" type="email" class="validate">
-                <label for="email">Email</label>
+                <label for="email">Email:</label>
               </div>
       
               <div class="input-field col s6">
                 <i class="material-icons prefix">phone</i>
-                <input id="icon_telephone" type="tel" name="telefono" class="validate">
-                <label for="icon_telephone">Teléfono</label>
+                <input id="telefono" type="tel" name="telefono" class="validate">
+                <label for="icon_telephone">Teléfono:</label>
               </div>
       
               <div class="input-field col s6">
                 <i class="material-icons prefix">comment</i>
                 <input id="comentario" type="text" name="comentario" class="validate">
-                <label for="comentario">Comentario</label>
+                <label for="comentario">Comentario:</label>
               </div>
       
               <button class="btn waves-effect waves-light right" type="submit" name="action">Enviar
