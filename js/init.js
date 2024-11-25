@@ -1,11 +1,19 @@
-(function($){
-  $(function(){
+document.addEventListener("DOMContentLoaded", function () {
+  const text = "Una solución a tu medida."; // Texto a animar
+  const h1 = document.getElementById("animatedText");
+  let index = 0;
 
-    $('.sidenav').sidenav();
-    $('.parallax').parallax();
+  function typeLetterByLetter() {
+    if (index < text.length) {
+      h1.textContent += text[index]; // Agrega la letra al contenido
+      index++; // Incrementa el índice
+    } else {
+      clearInterval(interval); // Detiene el intervalo cuando termina el texto
+    }
+  }
 
-  }); // end of document ready
-})(jQuery); // end of jQuery name space
+  const interval = setInterval(typeLetterByLetter, 100); // Cambia el tiempo en milisegundos si deseas acelerar o ralentizar
+});
 
 
 document.addEventListener('DOMContentLoaded', function () {
