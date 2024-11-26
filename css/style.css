@@ -24,8 +24,8 @@ p {
   /*border: 2px solid #007bff; */ /* Borde alrededor */
   border-radius: 5px; /* Bordes redondeados */
   background-color: rgba(255, 255, 255, 0.5); /* Fondo */
-  
   transition: all 0.3s ease; /* Transición para hover */
+  font-size: 20px;
 
 }
 

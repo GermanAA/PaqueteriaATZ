@@ -68,13 +68,14 @@
   <!-- Hero Section -->
   <div class="bg-light text-center py-5">
     <div class="background-div1 text-white">
-      <h1 id="animatedText" class="display-4"></h1>
+      
+      <p id="para1" data-text="Destinos:"> </p>
     </div>
   </div>
 
   <!-- Card Section -->
   <div class="container my-5">
-    <h4 class="text-center mb-4">Destinos:</h4>
+    
     <div class="row">
       <div class="col-lg-4 col-md-6 mb-4">
         <div class="card">
@@ -149,7 +150,8 @@
   <!-- Hero Section -->
   <div class="bg-light text-center py-5">
     <div class="background-div2 text-white">
-      <h1 class="display-4"></h1>
+      
+      <p id="para2" data-text="Contactanos:"> </p>
     </div>
   </div>
 

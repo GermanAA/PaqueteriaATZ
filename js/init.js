@@ -15,6 +15,39 @@ document.addEventListener("DOMContentLoaded", function () {
   const interval = setInterval(typeLetterByLetter, 100); // Cambia el tiempo en milisegundos si deseas acelerar o ralentizar
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  const paragraphs = document.querySelectorAll("p");
+
+  function typeLetterByLetter(element) {
+    const text = element.getAttribute("data-text"); // Obtiene el texto desde el atributo data-text
+    let index = 0;
+
+    function type() {
+      if (index < text.length) {
+        element.textContent += text[index];
+        index++;
+        setTimeout(type, 100); // Ajusta la velocidad aquí (100 ms)
+      }
+    }
+    type();
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const element = entry.target;
+        if (!element.classList.contains("visible")) {
+          element.classList.add("visible"); // Marca como visible
+          typeLetterByLetter(element); // Activa la animación
+        }
+      }
+    });
+  });
+
+  paragraphs.forEach((p) => observer.observe(p)); // Observa cada párrafo
+});
+
+
 
 document.addEventListener('DOMContentLoaded', function () {
   const form = document.getElementById('myForm');
