@@ -61,12 +61,15 @@ p {
   justify-content: center; /* Centrar horizontalmente */
   color: white; /* Color del texto para que contraste */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra en el texto */
+  padding: 5px;
+  margin: 5px;
+  border-radius: 6px;
 }
 
 .background-div1 {
   width: 100%; /* Ancho completo */
   height: 400px; /* Altura del div */
-  background-image: url('../img/background1.JPG'); /* Imagen de fondo */
+  background-image: url('../img/background1.jpg'); /* Imagen de fondo */
   background-size: cover; /* Escalar la imagen para cubrir todo el área */
   background-position: center; /* Centrar la imagen */
   background-repeat: no-repeat; /* Evitar que la imagen se repita */
@@ -75,11 +78,14 @@ p {
   justify-content: center; /* Centrar horizontalmente */
   color: white; /* Color del texto para que contraste */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra en el texto */
+  padding: 5px;
+  margin: 5px;
+  border-radius: 6px;
 }
 .background-div2 {
   width: 100%; /* Ancho completo */
   height: 400px; /* Altura del div */
-  background-image: url('../img/background2.JPG'); /* Imagen de fondo */
+  background-image: url('../img/background2.jpg'); /* Imagen de fondo */
   background-size: cover; /* Escalar la imagen para cubrir todo el área */
   background-position: center; /* Centrar la imagen */
   background-repeat: no-repeat; /* Evitar que la imagen se repita */
@@ -88,6 +94,9 @@ p {
   justify-content: center; /* Centrar horizontalmente */
   color: white; /* Color del texto para que contraste */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra en el texto */
+  padding: 5px;
+  margin: 5px;
+  border-radius: 6px;
 }
 
 
