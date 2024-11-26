@@ -17,15 +17,16 @@
 }
 
 p {
-  color: #000000; /* Color del texto */
+  color: #007bff; /* Color del texto */
   text-decoration: none; /* Quitar subrayado */
-  font-weight: bold; /* Hacer el texto en negrita */
+  /*font-weight: bold;*/ /* Hacer el texto en negrita */
   padding: 10px 15px; /* Espaciado interno */
   /*border: 2px solid #007bff; */ /* Borde alrededor */
   border-radius: 5px; /* Bordes redondeados */
   background-color: rgba(255, 255, 255, 0.5); /* Fondo */
   transition: all 0.3s ease; /* Transición para hover */
-  font-size: 20px;
+  font-size: 25px;
+  text-shadow: none;
 
 }
 
