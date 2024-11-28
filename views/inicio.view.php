@@ -8,6 +8,8 @@
 
   <!-- CSS de Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
 </head>
 
@@ -26,8 +28,8 @@
   <!-- Hero Section -->
   <div class="bg-light text-center py-5">
     <div class="background-div text-white">
-      <p id="animatedText" class="display-4"></p>
-   
+      <p id="animatedText" class="animacion"></p>
+
     </div>
   </div>
 
@@ -68,14 +70,14 @@
   <!-- Hero Section -->
   <div class="bg-light text-center py-5">
     <div class="background-div1 text-white">
-      
-      <p id="para1" data-text="Destinos:"> </p>
+
+      <p id="para1" class="animacion" data-text="Destinos:"> </p>
     </div>
   </div>
 
   <!-- Card Section -->
   <div class="container my-5">
-    
+
     <div class="row">
       <div class="col-lg-4 col-md-6 mb-4">
         <div class="card">
@@ -150,8 +152,8 @@
   <!-- Hero Section -->
   <div class="bg-light text-center py-5">
     <div class="background-div2 text-white">
-      
-      <p id="para2" data-text="Contactanos:"> </p>
+
+      <p id="para2" class="animacion" data-text="Contactanos:"> </p>
     </div>
   </div>
 

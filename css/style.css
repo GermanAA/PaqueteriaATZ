@@ -6,6 +6,11 @@
  * Made By MaterializeCSS.com
  */
 
+ body {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  
+}
 
 @media (min-width: 768px) {
   /* Estilos para pantallas grandes */
@@ -16,7 +21,7 @@
 
 }
 
-p {
+p.animacion {
   color: #007bff; /* Color del texto */
   text-decoration: none; /* Quitar subrayado */
   /*font-weight: bold;*/ /* Hacer el texto en negrita */
@@ -25,7 +30,7 @@ p {
   border-radius: 5px; /* Bordes redondeados */
   background-color: rgba(255, 255, 255, 0.5); /* Fondo */
   transition: all 0.3s ease; /* Transición para hover */
-  font-size: 25px;
+  font-size: 30px;
   text-shadow: none;
 
 }
