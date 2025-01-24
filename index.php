@@ -16,38 +16,44 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $correo = $_POST['correo'];
     $telefono = $_POST['telefono'];
     $comentario = $_POST['comentario'];
-    
 
     if ($comentario != "") {
         // Datos del correo
         $destinatario = "ventas@clean-up.mx";
         $asunto = "Servicio Paquetería";
-        $mensaje = "Nombre del cliente: " . $nombreCliente . "\nCorreo: " . $correo . "\nTeléfono: " . $telefono . "\nComentario: " . $comentario;
+
+        // Construir mensaje en formato HTML
+        $mensaje = "
+        <html>
+        <head>
+            <title>Servicio Paquetería</title>
+        </head>
+        <body>
+            <h2>Detalles del cliente:</h2>
+            <p><strong>Nombre del cliente:</strong> {$nombreCliente}</p>
+            <p><strong>Correo:</strong> {$correo}</p>
+            <p><strong>Teléfono:</strong> {$telefono}</p>
+            <p><strong>Comentario:</strong> {$comentario}</p>
+        </body>
+        </html>";
 
         // Configuración de PHPMailer
         $mail = new PHPMailer(true);
         try {
             // Configuración del servidor SMTP
             $mail->isSMTP();
-            $mail->Host = 'localhost'; // Servidor SMTP de Google
+            $mail->Host = 'localhost'; // Servidor SMTP
             $mail->SMTPAuth = false;
-            $mail->Username = 'info@paqueteria-atz.com'; // Cambia esto con tu correo de Google Workspace
-            //$mail->Password = ''; // Cambia esto con tu contraseña de Google Workspace o usa una App Password
-            $mail->Password =  $password; // Cambia esto con tu contraseña de Google Workspace o usa una App Password
-            //$mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
-            //$mail->Port = 465;
-            //$mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // Usar TLS
-            $mail->Port = 25; // 
-            // Habilitar depuración detallada
-            //$mail->SMTPDebug = 3; // Niveles: 1 = errores y mensajes, 2 = mensajes generales, 3 = información detallada (recomendado para depuración)
+            $mail->Username = 'info@paqueteria-atz.com';
+            $mail->Password = $password;
+            $mail->Port = 25;
 
             // Configuración del correo
-            $mail->setFrom('info@paqueteria-atz.com', 'Contacto Paquetería'); // Cambia esto con tu correo de Google Workspace
-            //$mail->addAddress($correo);
+            $mail->setFrom('info@paqueteria-atz.com', 'Contacto Paquetería');
             $mail->addAddress($destinatario);
 
             // Contenido del correo
-            $mail->isHTML(false);
+            $mail->isHTML(true); // Activar el modo HTML
             $mail->Subject = $asunto;
             $mail->Body = $mensaje;
 
@@ -79,6 +85,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
     }
 }
+
 
 require 'views/inicio.view.php';
 
