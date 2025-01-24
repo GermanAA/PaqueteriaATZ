@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if ($comentario != "") {
         // Datos del correo
-        $destinatario = "ventas@clean-up.mx";
+        $destinatario = "armendariz.german@gmail.com";
         $asunto = "Servicio Paquetería";
 
         // Construir mensaje en formato HTML
@@ -27,6 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <html>
         <head>
             <title>Servicio Paquetería</title>
+            <meta charset='UTF-8'>
         </head>
         <body>
             <h2>Detalles del cliente:</h2>
