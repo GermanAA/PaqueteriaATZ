@@ -180,15 +180,19 @@
             <textarea id="comentario" name="comentario" class="form-control" rows="3"></textarea>
           </div>
           <div class="col-12 text-end">
+            <!-- Google reCAPTCHA -->
+            <div class="g-recaptcha" data-sitekey="6Ld_QsMqAAAAAJvREOuFK8KMJMqzK2wCwMEeUZhS"></div>
             <button type="submit" class="btn btn-primary">Enviar</button>
           </div>
         </div>
+
       </form>
     </div>
   </footer>
 
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <script src="js/init.js"></script>
 </body>
 

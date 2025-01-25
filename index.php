@@ -10,82 +10,74 @@ $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
 $password = $_ENV['DB_PASSWORD'];
+$secretKey= $_ENV['CAP_PASSWORD'];
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $nombreCliente = $_POST['nombre'];
     $correo = $_POST['correo'];
     $telefono = $_POST['telefono'];
     $comentario = $_POST['comentario'];
+    $recaptchaResponse = $_POST['g-recaptcha-response'];
+
+    // Validar el CAPTCHA
+    //$secretKey = 'your-secret-key';
+    $verifyUrl = 'https://www.google.com/recaptcha/api/siteverify';
+    $response = file_get_contents($verifyUrl . '?secret=' . $secretKey . '&response=' . $recaptchaResponse);
+    $responseData = json_decode($response);
+
+    if (!$responseData->success) {
+        // CAPTCHA no válido
+        echo "<div class='alert alert-danger'>Error: Verifica el CAPTCHA antes de enviar el formulario.</div>";
+        exit;
+    }
 
     if ($comentario != "") {
-        // Datos del correo
+        // Continuar con el envío del correo
         $destinatario = "armendariz.german@gmail.com";
         $asunto = "Servicio Paquetería";
 
-        // Construir mensaje en formato HTML
         $mensaje = "
-        <html>
+        <!DOCTYPE html>
+        <html lang='es'>
         <head>
-            <title>Servicio Paquetería</title>
             <meta charset='UTF-8'>
+            <title>Servicio Paquetería</title>
         </head>
         <body>
             <h2>Detalles del cliente:</h2>
-            <p><strong>Nombre del cliente:</strong> {$nombreCliente}</p>
-            <p><strong>Correo:</strong> {$correo}</p>
-            <p><strong>Teléfono:</strong> {$telefono}</p>
-            <p><strong>Comentario:</strong> {$comentario}</p>
+            <p><strong>Nombre del cliente:</strong> " . htmlspecialchars($nombreCliente, ENT_QUOTES, 'UTF-8') . "</p>
+            <p><strong>Correo:</strong> " . htmlspecialchars($correo, ENT_QUOTES, 'UTF-8') . "</p>
+            <p><strong>Teléfono:</strong> " . htmlspecialchars($telefono, ENT_QUOTES, 'UTF-8') . "</p>
+            <p><strong>Comentario:</strong> " . nl2br(htmlspecialchars($comentario, ENT_QUOTES, 'UTF-8')) . "</p>
         </body>
         </html>";
 
         // Configuración de PHPMailer
         $mail = new PHPMailer(true);
         try {
-            // Configuración del servidor SMTP
             $mail->isSMTP();
-            $mail->Host = 'localhost'; // Servidor SMTP
+            $mail->Host = 'localhost';
             $mail->SMTPAuth = false;
             $mail->Username = 'info@paqueteria-atz.com';
             $mail->Password = $password;
             $mail->Port = 25;
 
-            // Configuración del correo
             $mail->setFrom('info@paqueteria-atz.com', 'Contacto Paquetería');
             $mail->addAddress($destinatario);
 
-            // Contenido del correo
-            $mail->isHTML(true); // Activar el modo HTML
+            $mail->isHTML(true);
+            $mail->CharSet = 'UTF-8';
             $mail->Subject = $asunto;
             $mail->Body = $mensaje;
 
-            // Enviar correo
             $mail->send();
-            echo "<!DOCTYPE html>
-            <html lang='es'>
-            <head>
-                <meta charset='UTF-8'>
-                <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-                <title>Mensaje Enviado</title>
-                <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH' crossorigin='anonymous'>
-                <link rel='stylesheet' href='estilos/styles.css'>
-            </head>
-            <body>
-                <div class='container mt-5'>
-                    <div class='alert alert-success'>
-                        <h4 class='alert-heading'>Gracias, $nombreCliente</h4>
-                        <p>Tu mensaje ha sido enviado con éxito. Nos pondremos en contacto contigo a la brevedad posible.</p>
-                        <hr>
-                        <p class='mb-0'><a href='index.php' class='btn btn-primary'>Volver al formulario</a></p>
-                    </div>
-                </div>
-                <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
-            </body>
-            </html>";
+            echo "<div class='alert alert-success'>Gracias, tu mensaje ha sido enviado con éxito.</div>";
         } catch (Exception $e) {
-            echo "¡Mensaje No Enviado! Error: {$mail->ErrorInfo}";
+            echo "¡Error al enviar el correo! {$mail->ErrorInfo}";
         }
     }
 }
+
 
 
 require 'views/inicio.view.php';
