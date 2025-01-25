@@ -157,37 +157,39 @@
     </div>
   </div>
 
+
+  <div class="container">
+    <h5 class="mb-4">¿Estás interesado o tienes dudas sobre algún servicio?</h5>
+    <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
+      <div class="row g-3">
+        <div class="col-md-6">
+          <label for="nombre" class="form-label">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" class="form-control" required>
+        </div>
+        <div class="col-md-6">
+          <label for="correo" class="form-label">Email:</label>
+          <input type="email" id="correo" name="correo" class="form-control" required>
+        </div>
+        <div class="col-md-6">
+          <label for="telefono" class="form-label">Teléfono:</label>
+          <input type="tel" id="telefono" name="telefono" class="form-control" required>
+        </div>
+        <div class="col-md-6">
+          <label for="comentario" class="form-label">Comentario:</label>
+          <textarea id="comentario" name="comentario" class="form-control" rows="3"></textarea>
+        </div>
+        <div class="col-12 text-end">
+          <!-- Google reCAPTCHA -->
+          <div class="g-recaptcha" data-sitekey="6Ld_QsMqAAAAAJvREOuFK8KMJMqzK2wCwMEeUZhS"></div>
+          <button type="submit" class="btn btn-primary">Enviar</button>
+        </div>
+      </div>
+
+    </form>
+  </div>
+
   <!-- Footer -->
   <footer class="bg-light py-5">
-    <div class="container">
-      <h5 class="mb-4">¿Estás interesado o tienes dudas sobre algún servicio?</h5>
-      <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
-        <div class="row g-3">
-          <div class="col-md-6">
-            <label for="nombre" class="form-label">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" class="form-control" required>
-          </div>
-          <div class="col-md-6">
-            <label for="correo" class="form-label">Email:</label>
-            <input type="email" id="correo" name="correo" class="form-control" required>
-          </div>
-          <div class="col-md-6">
-            <label for="telefono" class="form-label">Teléfono:</label>
-            <input type="tel" id="telefono" name="telefono" class="form-control" required>
-          </div>
-          <div class="col-md-6">
-            <label for="comentario" class="form-label">Comentario:</label>
-            <textarea id="comentario" name="comentario" class="form-control" rows="3"></textarea>
-          </div>
-          <div class="col-12 text-end">
-            <!-- Google reCAPTCHA -->
-            <div class="g-recaptcha" data-sitekey="6Ld_QsMqAAAAAJvREOuFK8KMJMqzK2wCwMEeUZhS"></div>
-            <button type="submit" class="btn btn-primary">Enviar</button>
-          </div>
-        </div>
-
-      </form>
-    </div>
   </footer>
 
   <!-- Scripts -->

@@ -9,8 +9,12 @@ require 'vendor/autoload.php';
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
-$password = $_ENV['DB_PASSWORD'];
-$secretKey= $_ENV['CAP_PASSWORD'];
+$password = $_ENV['DB_PASSWORD'] ?? '';
+$secretKey = $_ENV['CAP_PASSWORD'] ?? '';
+
+if (empty($password) || empty($secretKey)) {
+    die("Error: No se encontraron las variables necesarias en el archivo .env.");
+}
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $nombreCliente = $_POST['nombre'];
@@ -26,10 +30,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $responseData = json_decode($response);
 
     if (!$responseData->success) {
-        // CAPTCHA no válido
-        echo "<div class='alert alert-danger'>Error: Verifica el CAPTCHA antes de enviar el formulario.</div>";
+        echo "<div class='alert alert-danger'>Error: CAPTCHA no válido.</div>";
+        echo "<pre>" . print_r($responseData, true) . "</pre>";
         exit;
     }
+
 
     if ($comentario != "") {
         // Continuar con el envío del correo
@@ -73,7 +78,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $mail->send();
             echo "<div class='alert alert-success'>Gracias, tu mensaje ha sido enviado con éxito.</div>";
         } catch (Exception $e) {
-            echo "¡Error al enviar el correo! {$mail->ErrorInfo}";
+            error_log("Error al enviar el correo: " . $mail->ErrorInfo);
+            echo "<div class='alert alert-danger'>¡Error al enviar el correo! Por favor, inténtalo más tarde.</div>";
         }
     }
 }
@@ -81,7 +87,3 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
 require 'views/inicio.view.php';
-
-
-
-?>
