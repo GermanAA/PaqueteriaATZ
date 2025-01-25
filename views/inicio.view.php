@@ -48,14 +48,14 @@
 
       <div class="row text-center">
         <div class="col-md-4">
-          <div class="p-3 border">
+          <div class="p-3">
             <h2 class="text-primary"><i class="bi bi-lightning-fill"></i></h2>
             <h5>Misión</h5>
             <p class="">Paquetería - ATZ tiene el firme propósito de lograr la satisfacción de sus clientes, proporcionándoles servicios especializados de transporte terrestre y logística de mercancías, con altos niveles de calidad y seguridad.</p>
           </div>
         </div>
         <div class="col-md-4">
-          <div class="p-3 border">
+          <div class="p-3">
             <h2 class="text-primary"><i class="bi bi-star-fill"></i></h2>
             <h5>Valores</h5>
             <p class="">Puntualidad: Estamos convencidos que el tiempo es un recurso invaluable, por esta razón nuestro
@@ -67,7 +67,7 @@
           </div>
         </div>
         <div class="col-md-4">
-          <div class="p-3 border">
+          <div class="p-3">
             <h2 class="text-primary"><i class="bi bi-truck"></i></h2>
             <h5>Servicios</h5>
             <p class="">Paquetería: El transporte de mercancías se realiza de puerta a puerta, con más de 20 destinos al sur de la República Mexicana.</p>
