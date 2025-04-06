@@ -22,16 +22,16 @@
 
   <div class="container">
 
-      <!-- Navbar -->
-      <nav class="navbar navbar-expand-lg navbar-light ">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light ">
 
-        <a class="styled-link" href="#">Paquetería ATZ</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+      <a class="styled-link" href="#">Paquetería ATZ</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-      </nav>
+    </nav>
 
 
     <!-- Hero Section -->
@@ -47,14 +47,14 @@
     <div class="col">
 
       <div class="row text-center">
-        <div class="col-md-4">
+        <div class="col-md-4 card">
           <div class="p-3">
             <h2 class="text-primary"><i class="bi bi-lightning-fill"></i></h2>
             <h5>Misión</h5>
             <p class="">Paquetería - ATZ tiene el firme propósito de lograr la satisfacción de sus clientes, proporcionándoles servicios especializados de transporte terrestre y logística de mercancías, con altos niveles de calidad y seguridad.</p>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 card">
           <div class="p-3">
             <h2 class="text-primary"><i class="bi bi-star-fill"></i></h2>
             <h5>Valores</h5>
@@ -66,7 +66,7 @@
               valor. </p>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 card">
           <div class="p-3">
             <h2 class="text-primary"><i class="bi bi-truck"></i></h2>
             <h5>Servicios</h5>
@@ -93,27 +93,30 @@
     <div class="container my-5">
 
       <div class="row">
+
         <div class="col-lg-4 col-md-6 mb-4">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Puebla</h5>
+              <h5 class="card-title">Querétaro</h5>
             </div>
           </div>
         </div>
         <div class="col-lg-4 col-md-6 mb-4">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Tlaxcala</h5>
+              <h5 class="card-title">Monterrey</h5>
             </div>
           </div>
         </div>
         <div class="col-lg-4 col-md-6 mb-4">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Pachuca</h5>
+              <h5 class="card-title">Nuevo Laredo</h5>
             </div>
           </div>
         </div>
+
+
       </div>
       <div class="row">
         <div class="col-lg-4 col-md-6 mb-4">
@@ -142,24 +145,25 @@
         <div class="col-lg-4 col-md-6 mb-4">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Querétaro</h5>
+              <h5 class="card-title">Puebla</h5>
             </div>
           </div>
         </div>
         <div class="col-lg-4 col-md-6 mb-4">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Monterrey</h5>
+              <h5 class="card-title">Tlaxcala</h5>
             </div>
           </div>
         </div>
         <div class="col-lg-4 col-md-6 mb-4">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Nuevo Laredo</h5>
+              <h5 class="card-title">Pachuca</h5>
             </div>
           </div>
         </div>
+
       </div>
     </div>
 
