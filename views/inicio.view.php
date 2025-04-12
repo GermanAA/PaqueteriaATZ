@@ -94,10 +94,12 @@
 
       <div class="row">
 
+
+
         <div class="col-lg-4 col-md-6 mb-4">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Querétaro</h5>
+              <h5 class="card-title">Nuevo Laredo</h5>
             </div>
           </div>
         </div>
@@ -111,58 +113,59 @@
         <div class="col-lg-4 col-md-6 mb-4">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Nuevo Laredo</h5>
+              <h5 class="card-title">Querétaro</h5>
             </div>
           </div>
         </div>
 
+        <div class="row">
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Puebla</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Tlaxcala</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Pachuca</h5>
+              </div>
+            </div>
+          </div>
 
-      </div>
-      <div class="row">
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Coatzacoalcos</h5>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Coatzacoalcos</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">VillaHermosa</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Tuxtla Gutierrez</h5>
+              </div>
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">VillaHermosa</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Tuxtla Gutierrez</h5>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Puebla</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Tlaxcala</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Pachuca</h5>
-            </div>
-          </div>
-        </div>
+
 
       </div>
     </div>
