@@ -209,9 +209,74 @@
       </form>
     </div>
 
-    <!-- Footer -->
-    <footer class="py-5">
-    </footer>
+
+    <div class="row box">
+      <footer class="container py-5 my-5 border-top">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
+          <!-- Logo y derechos reservados -->
+          <div class="col mb-3">
+            <a
+              href="/"
+              class="d-flex align-items-center mb-3 text-decoration-none link-body-emphasis">
+              <img
+                src=""
+                alt="Logo"
+                height="55"
+                class="d-inline-block align-text-top logo">
+            </a>
+            <p class="text-body-secondary mb-0">© 2023</p>
+          </div>
+
+          <!-- Espacio vacío o sección adicional -->
+          <div class="col mb-3">
+            <!-- Puedes agregar aquí alguna información adicional si lo deseas. -->
+          </div>
+
+          <!-- Sección de Servicios -->
+          <div class="col mb-3">
+            <h5>Servicios</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+               
+              </li>
+              <li class="nav-item mb-2">
+                
+              </li>
+              <li class="nav-item mb-2">
+               
+              </li>
+              <li class="nav-item mb-2">
+                
+              </li>
+            </ul>
+          </div>
+
+          <!-- Sección de Redes Sociales -->
+          <div class="col mb-3">
+            <h5>Síguenos</h5>
+            <ul class="list-unstyled d-flex">
+              <li class="ms-0">
+                <a class="text-body-secondary me-3" href="#" aria-label="Facebook">
+                  <i class="bi bi-facebook"></i>
+                </a>
+              </li>
+              <li>
+                <a class="text-body-secondary me-3" href="#" aria-label="Twitter">
+                  <i class="bi bi-twitter"></i>
+                </a>
+              </li>
+              <li>
+                <a class="text-body-secondary me-3" href="#" aria-label="Instagram">
+                  <i class="bi bi-instagram"></i>
+                </a>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </footer>
+
+    </div>
 
   </div>
 
